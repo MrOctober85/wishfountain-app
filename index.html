@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wish Fountain — Cast Your Wish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: radial-gradient(ellipse at center, #1a1f4d 0%, #06060f 100%);
+      min-height: 100vh;
+      font-family: 'Manrope', sans-serif;
+      color: #eef0ff;
+    }
+    nav {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-style: italic;
+      color: #f3d27a;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .fountain { font-size: 80px; margin-bottom: 24px; }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 52px;
+      font-style: italic;
+      color: #f3d27a;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 18px;
+      color: rgba(210,216,255,0.7);
+      max-width: 500px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: linear-gradient(180deg, #ffe6a3, #e0ad44);
+      color: #1a1207;
+      padding: 16px 40px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.08);
+      color: #eef0ff;
+      padding: 16px 40px;
+      border-radius: 999px;
+      font-size: 16px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .features {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .feature {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(185,168,255,0.15);
+      border-radius: 16px;
+      padding: 32px;
+      width: 260px;
+      text-align: center;
+    }
+    .feature-icon { font-size: 40px; margin-bottom: 16px; }
+    .feature h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-style: italic;
+      color: #f3d27a;
+      margin-bottom: 8px;
+    }
+    .feature p { font-size: 14px; margin: 0; }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: rgba(210,216,255,0.3);
+      font-size: 13px;
+    }
+    footer a { color: rgba(210,216,255,0.5); text-decoration: none; margin: 0 12px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Wish Fountain</div>
+  </nav>
+  <div class="hero">
+    <div class="fountain">⛲</div>
+    <h1>Cast your wish into the world</h1>
+    <p>An anonymous space to share your deepest wishes, send messages in bottles, and connect with strangers across the ocean.</p>
+    <div class="buttons">
+      <a href="#" class="btn-primary">Download on App Store</a>
+      <a href="#" class="btn-secondary">Get it on Google Play</a>
+    </div>
+  </div>
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">✨</div>
+      <h3>Cast a Wish</h3>
+      <p>Write your deepest wish and watch it float among thousands of others around the world.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🫙</div>
+      <h3>Send a Bottle</h3>
+      <p>Write a message, seal it in a bottle, and send it sailing to a stranger across the ocean.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🌟</div>
+      <h3>Your Star Sky</h3>
+      <p>Every wish you make becomes a star in your personal constellation.</p>
+    </div>
+  </div>
+  <footer>
+    <p>© 2026 Wish Fountain. All rights reserved.</p>
+    <p style="margin-top: 12px;">
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/support">Support</a>
+    </p>
+  </footer>
+</body>
+</html>
