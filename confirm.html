@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wish Fountain — Email Confirmed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: radial-gradient(ellipse at center, #1a1f4d 0%, #0a0d22 60%, #06060f 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Manrope', sans-serif;
+      color: #eef0ff;
+      overflow: hidden;
+    }
+    .stars {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+    }
+    .star {
+      position: absolute;
+      border-radius: 50%;
+      animation: twinkle ease-in-out infinite;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.1; }
+      50% { opacity: 0.8; }
+    }
+    .container {
+      text-align: center;
+      padding: 40px 24px;
+      max-width: 480px;
+      position: relative;
+      z-index: 1;
+    }
+    .glow {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(185,168,255,0.15) 0%, transparent 70%);
+      margin: 0 auto 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(0.97); opacity: 0.7; }
+      50% { transform: scale(1.03); opacity: 1; }
+    }
+    .fountain-emoji { font-size: 72px; }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-style: italic;
+      color: #f3d27a;
+      margin-bottom: 8px;
+      text-shadow: 0 0 40px rgba(243,210,122,0.3);
+    }
+    .checkmark {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(134,229,214,0.15);
+      border: 2px solid #86e5d6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+      font-size: 24px;
+    }
+    .subtitle {
+      font-size: 13px;
+      color: rgba(185,168,255,0.7);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 16px;
+      color: rgba(210,216,255,0.65);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .button {
+      display: inline-block;
+      background: linear-gradient(180deg, #ffe6a3 0%, #e0ad44 100%);
+      color: #1a1207;
+      padding: 16px 48px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      font-family: 'Manrope', sans-serif;
+      box-shadow: 0 8px 32px rgba(224,173,68,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(224,173,68,0.4);
+    }
+    .hint {
+      margin-top: 20px;
+      font-size: 12px;
+      color: rgba(210,216,255,0.35);
+    }
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: rgba(185,168,255,0.2);
+      margin: 24px auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+  <div class="container">
+    <div class="glow">
+      <div class="fountain-emoji">⛲</div>
+    </div>
+    <h1>Wish Fountain</h1>
+    <div class="subtitle">✦ Account Confirmed ✦</div>
+    <div class="checkmark">✓</div>
+    <p>Your identity has been confirmed.<br>The fountain is waiting for your first wish.</p>
+    <a href="https://wishfountain.app" class="button">Open Wish Fountain →</a>
+    <div class="divider"></div>
+    <p class="hint">Download Wish Fountain from the App Store or Google Play<br>to begin your journey ✨</p>
+  </div>
+  <script>
+    const starsContainer = document.getElementById('stars');
+    for (let i = 0; i < 60; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      star.style.cssText = `
+        width: ${size}px;
+        height: ${size}px;
+        left: ${Math.random() * 100}%;
+        top: ${Math.random() * 100}%;
+        background: ${Math.random() > 0.7 ? '#f3d27a' : Math.random() > 0.5 ? '#b9a8ff' : '#ffffff'};
+        animation-duration: ${Math.random() * 3 + 2}s;
+        animation-delay: ${Math.random() * 3}s;
+        opacity: ${Math.random() * 0.5 + 0.1};
+      `;
+      starsContainer.appendChild(star);
+    }
+  </script>
+</body>
+</html>
