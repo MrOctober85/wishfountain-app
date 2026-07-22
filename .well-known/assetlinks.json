@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.http.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "app.wishfountain.android",
+    "sha256_cert_fingerprints": ["94:1B:CD:8E:13:51:E5:C2:60:E3:21:70:9B:02:4A:24:E1:CB:17:F1:C2:2D:7F:EA:80:7E:40:07:29:68:AB:B6"]
+  }
+}]
