@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account — Wish Fountain</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: #06060f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Georgia', serif;
+      color: #eef0ff;
+      padding: 24px;
+    }
+    .stars { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0; }
+    .star {
+      position: absolute; width: 2px; height: 2px; border-radius: 50%;
+      background: rgba(255,255,255,0.6);
+      animation: twinkle var(--dur, 3s) ease-in-out infinite;
+      animation-delay: var(--delay, 0s);
+    }
+    @keyframes twinkle { 0%,100%{opacity:0.2} 50%{opacity:1} }
+    .card {
+      position: relative; z-index: 1;
+      background: rgba(16,20,46,0.85);
+      border: 1px solid rgba(185,168,255,0.15);
+      border-radius: 24px; padding: 40px 36px;
+      max-width: 480px; width: 100%;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    }
+    .logo { text-align: center; font-size: 40px; margin-bottom: 8px; }
+    .app-name {
+      text-align: center; font-size: 13px; letter-spacing: 3px;
+      text-transform: uppercase; color: rgba(185,168,255,0.5); margin-bottom: 28px;
+    }
+    h1 { font-size: 22px; font-weight: normal; text-align: center; color: #eef0ff; margin-bottom: 8px; }
+    .subtitle {
+      text-align: center; font-size: 14px; color: rgba(185,168,255,0.55);
+      margin-bottom: 32px; font-family: 'Helvetica Neue', sans-serif; line-height: 1.5;
+    }
+    .steps {
+      background: rgba(10,14,36,0.6);
+      border: 1px solid rgba(185,168,255,0.1);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .step:last-child { margin-bottom: 0; }
+    .step-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(124,111,255,0.2);
+      border: 1px solid rgba(124,111,255,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #7c6fff;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .step-text {
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(238,240,255,0.8);
+      font-family: 'Helvetica Neue', sans-serif;
+      padding-top: 4px;
+    }
+    .step-text strong { color: #eef0ff; }
+    .warning {
+      background: rgba(255,80,80,0.08);
+      border: 1px solid rgba(255,80,80,0.2);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+      font-size: 13px;
+      color: rgba(255,150,150,0.9);
+      font-family: 'Helvetica Neue', sans-serif;
+      line-height: 1.5;
+    }
+    .warning strong { color: #ff8080; }
+    .btn {
+      width: 100%; padding: 15px; border: none; border-radius: 14px;
+      font-size: 15px; font-family: 'Helvetica Neue', sans-serif; font-weight: 600;
+      letter-spacing: 0.5px; cursor: pointer; transition: opacity 0.2s;
+    }
+    .btn-primary { background: linear-gradient(135deg, #7c6fff, #5b8fff); color: #fff; margin-bottom: 12px; }
+    .btn-secondary {
+      background: rgba(134,229,214,0.1); border: 1px solid rgba(134,229,214,0.25);
+      color: #86e5d6;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 13px;
+      color: rgba(185,168,255,0.4);
+      font-family: 'Helvetica Neue', sans-serif;
+    }
+    .contact a { color: #86e5d6; text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="card">
+  <div class="logo">⛲</div>
+  <div class="app-name">Wish Fountain</div>
+  <h1>Delete Your Account</h1>
+  <p class="subtitle">You can delete your account directly from within the app. Follow the steps below.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-text">Open the <strong>Wish Fountain</strong> app on your device</div>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-text">Tap the <strong>Profile</strong> icon at the bottom of the screen</div>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-text">Scroll down and tap <strong>Settings</strong></div>
+    </div>
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-text">Tap <strong>Delete Account</strong> at the bottom</div>
+    </div>
+    <div class="step">
+      <div class="step-number">5</div>
+      <div class="step-text">Confirm your decision — your account will be permanently deleted</div>
+    </div>
+  </div>
+
+  <div class="warning">
+    <strong>⚠️ Warning:</strong> Deleting your account is permanent and cannot be undone. All your wishes, bottles, stars, coins, and profile data will be permanently removed within 30 days.
+  </div>
+
+  <button class="btn btn-primary" onclick="openApp()">Open Wish Fountain →</button>
+  <button class="btn btn-secondary" onclick="window.location.href='mailto:support@wishfountain.app?subject=Delete My Account'">Contact Support Instead</button>
+
+  <div class="contact">
+    Need help? Email us at <a href="mailto:support@wishfountain.app">support@wishfountain.app</a>
+  </div>
+</div>
+
+<script>
+  const starsEl = document.getElementById('stars');
+  for (let i = 0; i < 60; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.setProperty('--dur', (2 + Math.random() * 4) + 's');
+    s.style.setProperty('--delay', (Math.random() * 4) + 's');
+    starsEl.appendChild(s);
+  }
+  function openApp() {
+    window.location.href = 'wishfountain://fountain';
+    setTimeout(() => {
+      window.location.href = 'https://play.google.com/store/apps/details?id=app.wishfountain.android';
+    }, 2000);
+  }
+</script>
+</body>
+</html>
